@@ -63,12 +63,6 @@ img {
     margin: 1rem auto;
 }
 
-.img-left {
-    width: 250px;
-    float: left;
-    margin: 0 2rem 1rem 0;
-}
-
 /* ======= Галерея ======= */
 .gallery {
     display: flex;
@@ -134,11 +128,12 @@ a:hover {
     cursor: pointer;
 }
 
-/* ======= Универсальное меню ======= */
+/* ======= Навигационное меню ======= */
 .site-nav {
     text-align: center;
     padding: 0.5rem;
-    overflow-x: auto; /* горизонтальная прокрутка на узких экранах */
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    -webkit-overflow-scrolling: touch; /* плавная прокрутка на мобильных */
 }
 
 .site-nav ul {
@@ -148,15 +143,15 @@ a:hover {
     margin: 0;
     padding: 0;
     gap: 0.5rem;
-    flex-wrap: nowrap; /* запрещаем перенос кнопок */
+    flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
 }
 
-.site-nav li {
+.site-nav li.nav-item {
     margin: 0;
-    flex: 0 0 auto; /* кнопки не растягиваются */
+    flex: 0 0 auto; /* Не растягиваем кнопки */
 }
 
-.site-nav a {
+.site-nav a.nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,16 +170,21 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-.site-nav a:hover {
+.site-nav a.nav-link:hover {
     color: #b22222;
 }
 
-.site-nav a.active {
+.site-nav a.nav-link.active {
     color: rgb(236, 164, 10);
     text-decoration: underline;
 }
 
-/* ======= Карточки ======= */
+/* ======= Прочие элементы ======= */
+.note-static {
+    position: static;
+    border-left: 4px solid #bbb;
+}
+
 .card {
     position: relative;
     background: #fff;
@@ -223,12 +223,6 @@ a:hover {
     border-radius: 4px;
 }
 
-/* ======= Прочие элементы ======= */
-.note-static {
-    position: static;
-    border-left: 4px solid #bbb;
-}
-
 .tagline {
     margin: 1rem 0 0;
     opacity: .9;
@@ -241,3 +235,8 @@ a:hover {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
+.img-left {
+    width: 250px;
+    float: left;
+    margin: 0 2rem 1rem 0;
+}
