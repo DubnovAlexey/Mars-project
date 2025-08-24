@@ -1,16 +1,18 @@
-.gallery{
+.gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 2rem auto;
     max-width: 1000px;
 }
-.gallery img{
+
+.gallery img {
     flex: 1 1 240px;
     max-width: 300px;
     object-fit: cover;
     aspect-ratio: 4/3;
 }
+
 .site-nav {
     padding: 0.5rem;
 }
