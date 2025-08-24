@@ -9,17 +9,56 @@
     <link type="image/x-icon" rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4287/4287555.png"/>
     <link rel="stylesheet" href="./CSS/style2.css"/>
     <link rel="stylesheet" href="./CSS/photo-style.css"/>
+    <style>
+
+        .site-nav {
+            padding: 0.5rem;
+        }
+
+        .site-nav .nav-link {
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            font-size: clamp(12px, 2vw, 18px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 3rem;
+            min-width: 5rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .site-nav .nav-link:hover {
+            color: #b22222;
+        }
+
+        .site-nav .nav-link.active {
+            color: rgb(236, 164, 10);
+            text-decoration: underline;
+        }
+    </style>
     <title>History of Mars Exploration</title>
 </head>
 <header>
     <h1 class="brand">Mars Odyssey</h1>
     <nav class="site-nav" aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="myths.html">Myths</a></li>
-            <li><a href="photos.html" class="active">Photo</a></li>
-            <li><a href="about.html">About The Project</a></li>
+        <ul class="nav justify-content-center flex-nowrap">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="myths.html">Myths</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="photos.html">Photo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About The Project</a>
+            </li>
         </ul>
     </nav>
 
