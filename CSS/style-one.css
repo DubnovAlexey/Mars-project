@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap');
+
+/* ======= Общие стили страницы ======= */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mars%2C_Jezero_Crater_-_Nasa%E2%80%99s_Perseverance_SOL_168_%2851383685664%29.png/1600px-Mars%2C_Jezero_Crater_-_Nasa%E2%80%99s_Perseverance_SOL_168_%2851383685664%29.png?20240215215317');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    border-bottom: 5px solid #b22222;
+    font-family: 'Orbitron', sans-serif;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* ======= Заголовки и статьи ======= */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #b22222;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin: 2rem 0 1rem;
+    background-color: #ffe4e1;
+    border-left: 5px solid #b22222;
+    text-align: left;
+}
+
+article {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+/* ======= Изображения ======= */
+img {
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid #b22222;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: #fff;
+    display: block;
+    margin: 1rem auto;
+}
+
+.img-left {
+    width: 250px;
+    float: left;
+    margin: 0 2rem 1rem 0;
+}
+
+/* ======= Галерея ======= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.gallery img {
+    flex: 1 1 240px;
+    max-width: 300px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+/* ======= Таблицы ======= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: #fff;
+    border: 2px solid #b22222;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #ffdede;
+}
+
+/* ======= Ссылки ======= */
+a {
+    color: #8B0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ======= Кнопка Back-to-Top ======= */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #8B0000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #b22222;
+    cursor: pointer;
+}
+
+/* ======= Универсальное меню ======= */
+.site-nav {
+    text-align: center;
+    padding: 0.5rem;
+    overflow-x: auto; /* горизонтальная прокрутка на узких экранах */
+}
+
+.site-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* запрещаем перенос кнопок */
+}
+
+.site-nav li {
+    margin: 0;
+    flex: 0 0 auto; /* кнопки не растягиваются */
+}
+
+.site-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: clamp(12px, 2vw, 18px);
+    height: 3rem;
+    min-width: 5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: #b22222;
+}
+
+.site-nav a.active {
+    color: rgb(236, 164, 10);
+    text-decoration: underline;
+}
+
+/* ======= Карточки ======= */
+.card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.badge-abs {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #8B0000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    z-index: 2;
+}
+
+.figure-wrap {
+    position: relative;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+.figure-caption {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* ======= Прочие элементы ======= */
+.note-static {
+    position: static;
+    border-left: 4px solid #bbb;
+}
+
+.tagline {
+    margin: 1rem 0 0;
+    opacity: .9;
+}
+
+.brand {
+    color: #b22222;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
