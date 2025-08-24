@@ -11,3 +11,29 @@
     object-fit: cover;
     aspect-ratio: 4/3;
 }
+.site-nav {
+    padding: 0.5rem;
+}
+
+.site-nav .nav-link {
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    font-size: clamp(12px, 2vw, 18px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    min-width: 5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.site-nav .nav-link:hover {
+    color: #b22222;
+}
+
+.site-nav .nav-link.active {
+    color: rgb(236, 164, 10);
+    text-decoration: underline;
+}
