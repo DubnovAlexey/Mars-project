@@ -245,17 +245,83 @@ a:hover {
 
  */
 
+/*.mars-card {*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 8px;*/
+/*    padding: 15px;*/
+/*    background: #fff;*/
+/*    text-align: justify; !* выравнивание текста *!*/
+/*    box-shadow: 0 2px 6px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*.mars-text {*/
+/*    max-height: 400px;      !* ограничение по высоте *!*/
+/*    overflow-y: auto;       !* скролл, если текста больше *!*/
+/*    padding-right: 5px;     !* чтобы скролл не налезал на текст *!*/
+/*}*/
+
+
+
+
+/* Улучшенные стили для карточек мифов */
 .mars-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    background: #fff;
-    text-align: justify; /* выравнивание текста */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border: 2px solid #b22222; /* Акцентная граница */
+    border-radius: 12px;
+    padding: 25px; /* Увеличенные отступы */
+    text-align: left; /* Вернем выравнивание по левому краю для лучшей читаемости */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mars-text {
-    max-height: 400px;      /* ограничение по высоте */
-    overflow-y: auto;       /* скролл, если текста больше */
-    padding-right: 5px;     /* чтобы скролл не налезал на текст */
+.mars-card:hover {
+    transform: translateY(-5px); /* Эффект "поднятия" при наведении */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Добавим стили для заголовков внутри карточек */
+.mars-card h3 {
+    color: #b22222; /* Заголовки мифов в том же цвете, что и основной акцент */
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Сделаем ссылки "Learn More" более заметными */
+.mars-card a.mt-auto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b22222;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mars-card a.mt-auto:hover {
+    background-color: #8B0000;
+    transform: translateY(-2px);
+}
+
+/* Улучшенный стиль основного текста для страницы */
+body {
+    /* ... остальные стили ... */
+    font-size: 1.125rem; /* Увеличение базового размера шрифта */
+    line-height: 1.7; /* Увеличение межстрочного интервала для читаемости */
+}
+
+/* Стили для изображений внутри карточек мифов */
+.mars-card img {
+    border: 3px solid #ccc; /* Более мягкая граница */
+    border-radius: 12px;
+    padding: 3px;
+    background-color: #f0f0f0;
+    margin: 1.5rem auto;
+    width: 100%;
+    height: auto;
+    display: block;
 }
