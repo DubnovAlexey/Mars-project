@@ -326,3 +326,28 @@ a:hover {
     height: auto;
     display: block;
 }
+
+/* Контейнер для видео с эффектом расширения */
+.video-expand {
+    position: relative; /* Позволяет дочерним элементам позиционироваться относительно него */
+    overflow: hidden; /* Скрывает содержимое, которое выходит за рамки по умолчанию */
+}
+
+/* Стили для iframe внутри контейнера */
+.video-expand iframe {
+    transition: transform 0.3s ease, z-index 0s 0.3s; /* Плавный переход и задержка для z-index */
+    transform-origin: center center; /* Точка трансформации в центре */
+    position: relative;
+    z-index: 1; /* По умолчанию ниже других элементов */
+}
+
+/* Эффект при наведении мыши */
+.video-expand:hover {
+    overflow: visible; /* Позволяет контенту выходить за границы */
+    z-index: 10; /* Переносит элемент на передний план, чтобы он был поверх всего */
+}
+
+.video-expand:hover iframe {
+    transform: scale(2.0); /* Увеличивает видео в 2 раза */
+    z-index: 11; /* Обеспечивает, что видео находится поверх контейнера */
+}
