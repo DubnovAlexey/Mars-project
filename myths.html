@@ -377,12 +377,26 @@
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label for="user-name" class="form-label">Your name</label>
-                        <input type="text" class="form-control" id="user-name">
+                        <label for="card-number" class="form-label">Номер карты</label>
+                        <input type="text" class="form-control" id="card-number" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expiry-date" class="form-label">Срок действия</label>
+                            <input type="text" class="form-control" id="expiry-date" placeholder="MM/YY">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvv-code" class="form-label">CVV-код</label>
+                            <input type="text" class="form-control" id="cvv-code" placeholder="123">
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label for="user-input" class="form-label">Your message</label>
-                        <textarea class="form-control" id="user-input" rows="5"></textarea>
+                        <label for="cardholder-name" class="form-label">Имя держателя карты</label>
+                        <input type="text" class="form-control" id="cardholder-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="donation-amount" class="form-label">Сумма пожертвования</label>
+                        <input type="number" class="form-control" id="donation-amount" placeholder="Например, 10">
                     </div>
                 </form>
             </div>
